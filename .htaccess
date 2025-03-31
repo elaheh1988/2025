@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# انتقال به www و https
+RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://www.hmtch.ir%{REQUEST_URI} [L,R=301]
